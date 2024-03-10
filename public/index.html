@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Dimond | Store</title>
+</head>
+<body class="dark:bg-[#282c4e] bg-gray-300 px-3 flex items-center justify-center">
+    
+    <div class="container grid grid-rows-[50px_80px_minmax(0,_1fr)] gap-3">
+        <div class="dark:bg-[#0b0f2f] bg-[#400ed6] py-2 px-4 rounded-b-md sticky top-0 z-50">
+            <nav class="h-full">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="dark:text-gray-300 text-xl font-bold text-white">DimondStore</a>
+                    <div class="flex gap-3">
+                        <div class="relative">
+                            <a href="#" class="absolute right-6 text-xl text-gray-300"><i class="ri-sun-line" id="mode"></i></a>
+                        </div>
+
+                        <a href="#" class="dark:text-gray-300 text-xl text-white" id="cart-btn">
+                            <i class="ri-shopping-cart-2-line relative"><span class="hidden w-4 h-4 absolute bg-red-500 rounded-full text-xs -left-1.5 -top-1.5 flex items-center justify-center" id="cart-notification"></span></i>
+                        </a>
+                    </div>
+                    
+                </div>
+    
+                <div class="dark:bg-[#0b0f2f] dark:shadow-[#282c4e] hidden flex items-center justify-center absolute right-6 w-72 h-auto bg-white p-2 rounded-md shadow-sm shadow-gray-400 overflow-hidden" id="cart-box">
+                    <span class="dark:text-gray-300" id="cart-title">Your Cart is empty!</span>
+                    <div class="hidden flex flex-col gap-3" id="cart-items">
+                        <ul class="w-full flex flex-col items-center gap-2" id="cart-items-list">
+                            
+                        </ul>
+                        <div class="w-full border-dashed border-t-[1px] border-gray-400 flex items-center justify-between">
+                            <span class="dark:text-gray-300 font-medium">Cart Total:</span>
+                            <span class="dark:text-gray-200 font-semibold" id="cart-total"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+        
+        <div class="dark:bg-[#200f2f] dark:shadow-slate-900 h-[70px] bg-white rounded-md shadow-sm shadow-gray-400">
+            <section class="py-2 px-3 flex items-center justify-around">
+                <div class="hidden sm:w-full sm:flex items-center justify-evenly">
+                    <div class="flex flex-col gap-1">
+                        <span class="dark:text-gray-300 text-sm font-semibold text-center">categories:</span>
+                        <ul class="category flex items-center justify-between gap-1">
+
+                            <li class="relative">
+                                <input type="radio" value="all" name="fillter" id="all" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="all" class="dark:bg-gray-300 text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >All</label>
+                                
+                            </li>
+
+                            <li class="relative">
+                                <input type="radio" value="electronics" name="fillter" id="electronics" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="electronics" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >Electronics</label>
+                            </li>
+                           
+                            <li class="relative">
+                                <input type="radio" value="jewelery" name="fillter" id="jewelery" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="jewelery" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >Jewelery</label>
+                            </li>
+
+                            <li class="relative">
+                                <input type="radio" value="men's clothing" name="fillter" id="men" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="men" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >Men's Clothing</label>
+                            </li>
+
+                            <li class="relative">
+                                <input type="radio" value="women's clothing" name="fillter" id="women" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="women" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >Women's Clothing</label>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <span class="dark:text-gray-300 text-sm text-center font-medium">Sort By:</span>
+                        <ul class="flex items-center justify-between gap-1">
+                            <li class="relative">
+                                <input type="radio" value="defualt" name="sort" id="defualt" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="defualt" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >Defualt</label>
+                            </li>
+
+                            <li class="relative">
+                                <input type="radio" value="asc" name="sort" id="asc" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="asc" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >ASC</label>
+                            </li>
+                                
+                            <li class="relative">
+                                <input type="radio" value="desc" name="sort" id="desc" class="label peer absolute inset-0 w-full -z-10">
+                                <label for="desc" class="dark:bg-gray-300 peer text-sm p-2 bg-slate-200 rounded-lg cursor-pointer peer-checked:bg-yellow-500" >DESC</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full h-full flex items-center justify-around sm:hidden">
+                    <div class="flex flex-col">
+                        <span class="dark:text-gray-300 text-sm font-semibold">categories:</span>
+                        <select name="categories" id="product-selector" class="dark:bg-gray-400 bg-slate-200 rounded-md focus:outline-slate-300">
+                            <option value="all">All</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="jewelery">Jewelery</option>
+                            <option value="men's clothing">Men's Clothing</option>
+                            <option value="women's clothing">Women's Clothing</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="dark:text-gray-300 text-sm font-semibold">Sort By:</span>
+                        <select name="categories" id="sort-selector" class="dark:bg-gray-400 bg-slate-200 rounded-md focus:outline-slate-300">
+                            <option value="defualt">Defualt</option>
+                            <option value="asc">ASC</option>
+                            <option value="desc">DESC</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 rounded-lg sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6" id="products">
+                
+        </div>
+
+        <!-- Loading -->
+
+        <div id="loading" class="hidden w-full flex items-center justify-center">
+            <svg style="stroke: white" width="70%" height="500" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .spinner_Uvk8 {
+                        animation: spinner_otJF 1.6s cubic-bezier(.52, .6, .25, .99) infinite
+                    }
+
+                    .spinner_ypeD {
+                        animation-delay: .2s
+                    }
+
+                    .spinner_y0Rj {
+                        animation-delay: .4s
+                    }
+
+                    @keyframes spinner_otJF {
+                        0% {
+                            transform: translate(12px, 12px) scale(0);
+                            opacity: 1
+                        }
+
+                        75%,
+                        100% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 0
+                        }
+                    }
+                </style>
+                <path class="spinner_Uvk8"
+                    d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
+                    transform="translate(12, 12) scale(0)" />
+                <path class="spinner_Uvk8 spinner_ypeD"
+                    d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
+                    transform="translate(12, 12) scale(0)" />
+                <path class="spinner_Uvk8 spinner_y0Rj"
+                    d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
+                    transform="translate(12, 12) scale(0)" />
+            </svg>
+        </div>
+
+    </div>
+
+    
+
+    <!-- mudal -->
+
+    <div class="hidden fixed top-0 left-0 w-full h-screen py-10 px-3 z-10 flex items-center justify-center bg-gray-500 bg-opacity-75 transition-opacity" id="mudal">
+            <div class="dark:bg-[#0b0f2f] dark:text-gray-300 max-w-[1100px] w-full h-[500px] bg-white rounded-md flex gap-2 items-center justify-between py-4 px-2">
+                    <img src="" alt="" class="max-w-[400px] w-[120px] h-[80%] sm:w-full  md:h-full bg-cover bg-gray-400 rounded-sm">
+                <div class="h-full flex flex-col justify-around">
+                    <div class="flex flex-col space-y-2">
+                        <span class="font-semibold" id="title"></span>
+                        <span class=" text-gray-500 " id="categorie"></span>
+                        <p class="max-h-[250px] h-full overflow-auto" id="description"></p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="btn dark:bg-[#7950f2]" id="mudal-buy-btn">Buy</button>
+                        <span class="dark:text-[#7950f2] font-semibold text-[#400ed6]" id="price"></span>
+                    </div>
+                    
+                </div>
+                <button type="button" class="dark:text-gray-300 self-start text-lg text-red-600" id="close">x</button>
+            </div>
+    </div>
+
+    <!-- product -->
+    <template id="template">
+        <div class="product">
+            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
+            <span class="name">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</span>
+            <div class="info">
+                <span class="price">$109.95</span>
+                <span class="rait">3.2</span>
+            </div>
+            <div class="buttons">
+                <button type="button" class="detalis pro-btn">Detalis</button>
+                <button type="button" class="buy pro-btn">Buy</button>
+            </div>
+            
+        </div>
+    </template>
+
+    <script src="../src/final.js" type="module"></script>
+</body>
+</html>

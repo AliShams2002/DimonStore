@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .btn{
+        @apply max-w-44 w-full p-1 bg-[#400ed6] text-white rounded-md text-[12px] hover:bg-[#3f368f] transition-all delay-[0.3];
+    }
+}
