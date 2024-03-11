@@ -2,9 +2,9 @@ const path = require('path')
 
 module.exports = {
     mode: 'production',
-    entry: './public/js/app.js',
+    entry: './src/js/app.js',
     output: {
         filename: 'final.js',
-        path: path.resolve(__dirname,'./src')
+        path: path.resolve(__dirname,'./public/js/app.js')
     }
 }

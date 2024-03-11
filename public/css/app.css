@@ -889,81 +889,69 @@ video {
   --tw-shadow-color: #9ca3af;
   --tw-shadow: var(--tw-shadow-colored);
 }
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-
 .hover\:bg-\[\#358b45\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(53 139 69 / var(--tw-bg-opacity));
 }
-
 .focus\:outline-slate-300:focus {
   outline-color: #cbd5e1;
 }
-
 .peer:checked ~ .peer-checked\:bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:bg-\[\#0b0f2f\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(11 15 47 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:bg-\[\#200f2f\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(32 15 47 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:bg-\[\#282c4e\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(40 44 78 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:bg-\[\#7950f2\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(121 80 242 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:bg-gray-300) {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:bg-gray-400) {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
-
 :is(.dark .dark\:text-\[\#7950f2\]) {
   --tw-text-opacity: 1;
   color: rgb(121 80 242 / var(--tw-text-opacity));
 }
-
 :is(.dark .dark\:text-gray-200) {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
-
 :is(.dark .dark\:text-gray-300) {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
-
 :is(.dark .dark\:shadow-\[\#282c4e\]) {
   --tw-shadow-color: #282c4e;
   --tw-shadow: var(--tw-shadow-colored);
 }
-
 :is(.dark .dark\:shadow-slate-900) {
   --tw-shadow-color: #0f172a;
   --tw-shadow: var(--tw-shadow-colored);
 }
-
 @media (min-width: 640px) {
 
   .sm\:flex {
@@ -982,28 +970,24 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:h-full {
     height: 100%;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 1280px) {
 
   .xl\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 1536px) {
 
   .\32xl\:grid-cols-6 {
