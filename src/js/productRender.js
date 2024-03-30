@@ -31,11 +31,13 @@ export class ProductsRender{
 
             productElm.innerHTML = 
             `
-            <div class="flex flex-col gap-3">
-                    <img src="${item.image}" alt="" class="w-full h-28 rounded-md" id="img">
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center justify-center">
+                    <img src="${item.image}" alt="" class="w-2/3 h-28 rounded-md" id="img">
+                    </div>
                     <span class="dark:text-gray-300 h-6 text-sm font-bold w-full overflow-hidden" id="title">${item.title}</span>
                     <div class="flex items-center justify-between">
-                        <span class="dark:text-[#7950f2] font-semibold text-[#400ed6]" id="price">$${item.price}</span>
+                        <span class="dark:text-[#7950f2] font-semibold text-[#000000]" id="price">$${item.price}</span>
                         <span class="dark:text-gray-300 font-semibold">${item.rating.rate}<i class="ri-star-fill text-yellow-300"></i></span>
                     </div>
                     <div class="flex flex-row-reverse items-center justify-between gap-1 mt-2">
